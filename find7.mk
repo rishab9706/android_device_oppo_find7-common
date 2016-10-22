@@ -19,9 +19,18 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
+    fstab.qcom.std \
+    fstab.qcom.lvm \
     init.qcom.rc \
     init.qcom.usb.rc
+
+# LVM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/lvm/lvm_init.sh:root/lvm_init.sh \
+    $(LOCAL_PATH)/lvm/lvm_init_recovery.sh:recovery/root/sbin/lvm_init_recovery.sh \
+    $(LOCAL_PATH)/lvm/lvm_setprop.sh:root/lvm_setprop.sh \
+    $(LOCAL_PATH)/lvm/lvm:root/sbin/lvm \
+    $(LOCAL_PATH)/lvm/lvm.conf:root/lvm/etc/lvm.conf
 
 # Audio
 PRODUCT_COPY_FILES += \

@@ -13,7 +13,4 @@ ro.qti.sensors.ir_proximity=true
 ro.qti.sensors.vmd=true
 
 # CABL is handled by the panel
-ro.qualcomm.cabl=0
-
-# By default, primary storage is physical
-ro.vold.primary_physical=1
+ro.qualcomm.cabl=0 
